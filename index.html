@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="calc.js" defer></script>
+    <title>Calc</title>
+</head>
+<body>
+    
+<!-- hover menü és négyzet négy sarkára helyezkedő div -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#calcdiv">Feet to Meter</a>
+        <a href="#tododiv">Todo</a>
+        <a href="#cuptogrammdiv">Cup to Gramm</a>
+        <a href="#">About</a>
+    </nav>
+    <div class="divider"></div>
+    <div id="calcdiv">
+        <h2>Feet to Meter</h2>
+        <section>
+            <input id="meter1" type="number" placeholder="0" min="0" max="1000000000" onkeypress="return event.charCode>=48 && event.charCode<=57" onkeyup="if(this.value > 1000000000) {this.value = 1000000000}"/>
+            <label for="meter1">Meter(s) is equal to</label>
+
+            <div id="feet1" contentEditable=false data-text="0.00"></div>
+            <label for="feet1">Feet</label>
+        </section>          
+
+        <section>
+            <input id="feet2" type="number" placeholder="0" min="0" max="1000000000" onkeypress="return event.charCode>=48 && event.charCode<=57" onkeyup="if(this.value > 1000000000) {this.value = 1000000000}"/>
+            <label for="feet2">Feet is equal to</label>
+
+            <div id="meter2" contentEditable=false data-text="0.00"></div>
+            <label for="meter2">Meter(s)</label>
+        </section>
+    </div>
+    
+
+    <div id="tododiv">
+        <h2>To-do List</h2>
+        <input type="text" id="todo">
+        <button type="button" id="addButton">Add To List</button>
+        <ul id="todolist">
+        </ul>
+    </div>
+
+    <div id="cuptogrammdiv" style="cursor: not-allowed;">
+        <h2>Cup to Gramm (in development)</h2>
+        <section>
+            <input id="cup" type="number" placeholder="0" min="0" max="100" onkeypress="return event.charCode>=48 && event.charCode<=57" onkeyup="if(this.value > 100) {this.value = 100}" style="cursor: not-allowed;"/>
+            <label for="cup" style="cursor: not-allowed;">Cup of
+                <select name="cup" id="cup" style="cursor: not-allowed;">
+                    <option value="Flour">Flour</option>
+                    <option value="Sugar">Sugar</option>
+                    <option value="Broth">Broth</option>
+                    <option value="Cukor">Cukor</option>
+                </select>
+                is equal to</label>
+            <div id="gramm" contentEditable=false data-text="0.00" style="cursor: not-allowed;"></div>
+            <label for="feet1" style="cursor: not-allowed;">Gramm</label>
+        </section> 
+    </div>
+
+    <div style="margin-top: 50em;"></div>
+
+</body>
+</html>

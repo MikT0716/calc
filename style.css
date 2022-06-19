@@ -1,0 +1,252 @@
+/*
+aquamarine: rgba(133, 255, 199, 1);
+skobeloff: rgba(41, 115, 115, 1);
+coral: rgba(255, 133, 82, 1);
+platinum: rgba(230, 230, 230, 1);
+jet: rgba(57, 57, 58, 1); 
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+
+* {
+    font-family: 'Special Elite', cursive;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 auto;
+    background-color: rgb(210, 210, 210);
+}
+
+nav {
+    height: 4em;
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: space-evenly;
+    background-color: rgb(154, 154, 154);
+    z-index: 10;
+}
+
+.divider {
+    height: 2.5em;
+    background-color: rgba(57, 57, 58, 1);
+    margin-bottom: 3em;
+    z-index: 8;
+    position: sticky;
+    top: 4em;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    width: 12%;
+    height: 100%;
+    background-color: rgba(41, 115, 115, 1);
+    border: 2px solid black;
+    border-radius: 2em;
+    margin-top: 1em;
+    font-size: 22px;
+    text-align: center;
+    padding-top: .9em;
+}
+
+nav > :first-child, nav > :last-child {
+    background-color: rgba(255, 133, 82, 1);
+}
+
+nav a:hover {
+    transform: scale(1.2);
+    cursor: crosshair;
+    background-color: rgb(68, 196, 196);
+}
+
+nav > :first-child:hover, nav > :last-child:hover {
+    background-color: rgb(255, 169, 82);
+}
+
+
+/*------------SCROLLBAR--------------------------------------------------------- */
+
+/* width */
+::-webkit-scrollbar {
+    width: 1rem;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: rgba(250, 128, 114, 0.597); 
+}
+   
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: salmon; 
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 95, 78);
+}
+
+/*------------FEET TO METER------------------------------------------------------------*/
+
+#calcdiv {
+    text-align: center;
+    margin: 4em auto;
+    width: 80%;
+    scroll-margin-top: 10em;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4em;
+  }
+
+input[type=number] {
+    line-height: 2em;
+    width: 30%;
+    border-radius: 2em;
+    font-size: 1.5em;
+    text-align: center;
+    background: #e0e0e0;
+    box-shadow: inset 3px 3px 5px #707070,
+            inset -4px -4px 5px #ffffff;
+}
+
+label {
+    margin: 1em;
+    width: 20%;
+}
+
+#feet1, #meter2 {
+    text-align: center;
+    width: 25%;
+    line-height: 2em;
+    border: 2px solid salmon;
+    border-radius: 2em;
+    font-size: 1.5em;
+    padding-top: .2em;
+}
+
+[contentEditable=false]:empty:not(:focus):before{
+    content:attr(data-text)
+}
+
+/* ----------------------TODO ---------------------------------------------------------*/
+
+#tododiv {
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+    scroll-margin-top: 10em;
+}
+
+#todo {
+    position: relative;
+    width: 60%;
+    padding: 1em;
+    border: 2px solid black;
+}
+
+#todo:focus {
+    background-color: aquamarine;
+    outline-style: none;
+}
+
+#addButton {
+    position: relative;
+    width: 15%;
+    padding: 1em;
+    background-color: salmon;
+}
+
+#addButton:hover, #addButton:focus {
+    background-color: rgb(255, 95, 78);
+    cursor: pointer;
+    outline-style: none;
+}
+
+
+ul {
+    display: inline-block;
+    list-style-type: none;
+    width: 90%;
+    padding: 0;
+    border: .2em solid #707070;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 1em;
+    height: 3em;
+    text-align: left;
+}
+
+ul li:nth-child(even){
+    background-color: darkgray;
+}
+
+
+ul li:hover {
+    background-color: rgba(250, 128, 114, 0.597);
+}
+
+ul .delButton {
+    position: absolute;
+    right: 0;
+    width: 3em;
+    height: 100%;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    
+}
+
+ul .delButton:hover {
+    background-color: rgb(255, 95, 78);
+    cursor: pointer;
+}
+
+
+/*-------------------CUP TO GRAMM------------------------------------------------------*/
+
+#cuptogrammdiv {
+    text-align: center;
+    margin: 4em auto;
+    width: 80%;
+    scroll-margin-top: 10em;
+    opacity: .4;
+}
+
+#cuptogrammdiv input {
+    width: 15%;
+}
+
+#cuptogrammdiv select {
+    width: 50%;
+    height: 2em;
+    font-size: 1.5em;
+    margin: 0 1em;
+}
+
+#cuptogrammdiv label:first-of-type {
+    width: 40%;
+}
+
+#gramm {
+    text-align: center;
+    width: 15%;
+    line-height: 2em;
+    border: 2px solid salmon;
+    border-radius: 2em;
+    font-size: 1.5em;
+    padding-top: .2em;
+}
+
